@@ -18,7 +18,8 @@ GH = Github(GH_USER, GH_USER_TOKEN)
 USER_REPOS = GH.get_user().get_repos()
 
 # Define initial REPOS dictionary
-REPOS = dict(top=dict(clones=dict(), views=dict()), all=dict())
+REPOS = dict(open=dict(issues=dict(), pull_requests=dict()),
+             top=dict(clones=dict(), views=dict()), all=dict())
 
 # Defines the number of top clones, views that you are interested in
 TOP_COUNT = 10
@@ -35,6 +36,16 @@ for repo in USER_REPOS:
         for issue in open_issues:
             issue_info = dict(title=issue.title, number=issue.number)
             issues.append(issue_info)
+        if issues != []:
+            REPOS['open']['issues'][repo.name] = issues
+
+        pull_requests = list()
+        for pull_request in repo_info.get_pulls(state='open'):
+            pull_request_info = dict(
+                title=pull_request.title, number=pull_request.number)
+            pull_requests.append(pull_request_info)
+        if pull_requests != []:
+            REPOS['open']['pull_requests'][repo.name] = pull_requests
 
         clone_traffic = repo.get_clones_traffic(per="week")
         REPOS['top']['clones'][repo.name] = dict(
@@ -74,12 +85,12 @@ for repo in USER_REPOS:
 
         REPOS['all'][repo.name] = dict(
             clones=weekly_clones, open_issues=issues,
+            pull_requests=pull_requests,
             top_referrers=top_referrers, top_paths=top_paths,
             stars=stargazers_count, topics=topics, views=weekly_views)
 
     except GithubException:
         pass
-
 
 # Sort by top clones
 REPOS['top']['clones'] = dict(sorted(REPOS['top']['clones'].items(),

@@ -1,3 +1,39 @@
+commit 32899cd822a4e5dbfaaf8f7ced277a50f3587387
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Tue Mar 10 15:46:58 2020 -0400
+
+    Updated: Comments, usage, etc.
+
+commit f6f77aea9d4eed91c51fd2c734c68ecb6edb2967
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Tue Mar 10 15:30:56 2020 -0400
+
+    Fixed pylint issue by adding a temp function.
+
+commit cec2c75ec8b529d9f567715babf0ce9932c42e57
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Tue Mar 10 15:30:37 2020 -0400
+
+    Changed: Only testing with Python 3.7
+
+commit ea01607e2f385d6ace647c977c3d493025a97d03
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Tue Mar 10 15:13:40 2020 -0400
+
+    Added: Issues, PR's, Clone and referrer stats
+
+commit 7b2ab39331b6bc98bb7e75d44c40447955175d17
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Tue Mar 10 15:13:03 2020 -0400
+
+    Deleted old script
+
+commit 5a86d66b6889fd2b3e69ec43aa8a415ca8933866
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Tue Mar 10 13:26:25 2020 -0400
+
+    Updated: changelog
+
 commit adc31e0227f75d8ea27611005ab57a1411c9066d
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Tue Mar 10 13:26:16 2020 -0400

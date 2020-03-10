@@ -35,6 +35,10 @@ password = PersonalAccessToken
 
 ## Dependencies
 
+## Usage
+
+To view the different usages available checkout the [usage](USAGE.md) guide.
+
 ## License
 
 MIT

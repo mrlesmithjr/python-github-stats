@@ -1,4 +1,4 @@
-"""Provides user authentication to GitLab API."""
+"""Provides user authentication to GitHub API."""
 
 import json
 import netrc
@@ -26,6 +26,7 @@ class User:
 
     def auth(self):
         """Authorize user to GitHub API."""
+
         github_connection = Github(
             base_url=self.url, login_or_token=self.token)
 

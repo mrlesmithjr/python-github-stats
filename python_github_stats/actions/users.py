@@ -21,3 +21,6 @@ class Users:
         current_user_attrs = json.loads(json_raw_data)
 
         return current_user_attrs
+
+    def lookup(self):
+        """Possible lookup usage in the future."""

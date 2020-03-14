@@ -1,9 +1,9 @@
 """Main module."""
 import json
-from python_github_stats.cli import cli_args
-from python_github_stats.auth.user import User
-from python_github_stats.actions.users import Users
-from python_github_stats.actions.repos import Repos
+from github_stats.cli import cli_args
+from github_stats.auth.user import User
+from github_stats.actions.users import Users
+from github_stats.actions.repos import Repos
 
 
 def main():

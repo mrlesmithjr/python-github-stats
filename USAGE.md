@@ -6,7 +6,7 @@ will change over time. So, this is just a subset of use cases.
 ## Help
 
 ```bash
-python -m python_github_stats --help
+python -m github_stats --help
 ...
 usage: __main__.py [-h] [--netrcfile NETRCFILE] [--token TOKEN] [--url URL]
                    {user-attrs,user-repos}
@@ -30,7 +30,7 @@ optional arguments:
 To get a list of all of your repositories:
 
 ```bash
-python -m python_github_stats user-repos
+python -m github_stats user-repos
 ```
 
 ## User
@@ -38,5 +38,5 @@ python -m python_github_stats user-repos
 To view your GitHub user attributes:
 
 ```bash
-python -m python_github_stats user-attrs
+python -m github_stats user-attrs
 ```

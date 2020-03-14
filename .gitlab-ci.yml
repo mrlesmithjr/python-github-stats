@@ -12,9 +12,9 @@ stages:
 flake8:
   stage: linting
   script:
-    - flake8 python_github_stats/
+    - flake8 github_stats/
 
 pylint:
   stage: linting
   script:
-    - pylint python_github_stats/
+    - pylint github_stats/

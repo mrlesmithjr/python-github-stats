@@ -2,7 +2,7 @@
 import json
 
 
-class Repos():
+class Repos:
     """Main GitHub Repos class."""
 
     def __init__(self, github_connection):
@@ -53,7 +53,7 @@ class Repos():
             issues.append(json.loads(raw_data))
 
         # Update repo with issues
-        self.repos[repo.full_name]['issues'] = issues
+        self.repos[repo.full_name]["issues"] = issues
 
     def get_pulls(self, repo):
         """Get list of pull requests for repo and append to self.repos dict."""
@@ -69,7 +69,7 @@ class Repos():
             pull_requests.append(json.loads(raw_data))
 
         # Update repo with pull requests
-        self.repos[repo.full_name]['pulls'] = pull_requests
+        self.repos[repo.full_name]["pulls"] = pull_requests
 
     def get_top_referrers(self, repo):
         """Get list of top referrers for repo and append to self.repos dict."""
@@ -85,7 +85,7 @@ class Repos():
             top_referrers.append(json.loads(raw_data))
 
         # Update repo with top referrers
-        self.repos[repo.full_name]['top_referrers'] = top_referrers
+        self.repos[repo.full_name]["top_referrers"] = top_referrers
 
     def get_clones_traffic(self, repo):
         """Get clone traffic for repo and append to self.repos dict."""
@@ -94,9 +94,11 @@ class Repos():
         clones = repo.get_clones_traffic()
 
         # Update repos with clone traffic
-        self.repos[repo.full_name]['clones_traffic'] = {
-            'count': clones['count'], 'uniques': clones['uniques'],
-            'clones': clones['clones']}
+        self.repos[repo.full_name]["clones_traffic"] = {
+            "count": clones["count"],
+            "uniques": clones["uniques"],
+            "clones": clones["clones"],
+        }
 
     def get_views_traffic(self, repo):
         """Get view traffic for repo and append to self.repos dict."""
@@ -105,5 +107,7 @@ class Repos():
         views = repo.get_views_traffic()
 
         # Update repo with view traffic
-        self.repos[repo.full_name]['views_traffic'] = {
-            'count': views['count'], 'uniques': views['uniques']}
+        self.repos[repo.full_name]["views_traffic"] = {
+            "count": views["count"],
+            "uniques": views["uniques"],
+        }

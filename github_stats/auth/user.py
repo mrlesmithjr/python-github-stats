@@ -27,8 +27,7 @@ class User:
     def auth(self):
         """Authorize user to GitHub API."""
 
-        github_connection = Github(
-            base_url=self.url, login_or_token=self.token)
+        github_connection = Github(base_url=self.url, login_or_token=self.token)
 
         return github_connection
 
@@ -39,9 +38,9 @@ class User:
             parser = netrc.netrc(self.netrcfile)
 
             # Strip http from url for proper netrc machine lookup
-            machine = self.url.replace('http://', '')
+            machine = self.url.replace("http://", "")
             # Strip https from url for proper netrc machine lookup
-            machine = self.url.replace('https://', '')
+            machine = self.url.replace("https://", "")
 
             # Parse machine lookup values from netrc. Only need password
             _login, _username, password = parser.authenticators(machine)
@@ -49,5 +48,5 @@ class User:
             return password
 
         except FileNotFoundError as error:
-            print(json.dumps({'error': f'{error}'}))
+            print(json.dumps({"error": f"{error}"}))
             sys.exit(1)

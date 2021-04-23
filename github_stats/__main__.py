@@ -13,7 +13,7 @@ def main():
     user = User(args)
     github_connection = user.auth()
 
-    action_map = {'user-attrs': user_attrs, 'user-repos': user_repos}
+    action_map = {"user-attrs": user_attrs, "user-repos": user_repos}
 
     action = action_map[args.action]
 
